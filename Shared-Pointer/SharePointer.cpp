@@ -220,6 +220,5 @@ int main()
     // debería haber disminuido ahora a 1.
     cout << "--- Punteros Compartidos ptr1 ---\n";
     cout << ptr1;
- 
     return 0;
 }
