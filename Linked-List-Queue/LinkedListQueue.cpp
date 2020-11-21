@@ -197,6 +197,6 @@ int main() {
 	Cola_string.enqueue("q");
 	Cola_string.enqueue("i");
 	Cola_string.ImprimirLista();
-
-    return 0;
+	
+	return 0;
 }
