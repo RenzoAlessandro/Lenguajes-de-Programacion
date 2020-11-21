@@ -173,7 +173,7 @@ public:
 int main()
 {
 	cout << endl;
-  cout << "\t    LISTA ENLAZADA" << endl;
+	cout << "\t    LISTA ENLAZADA" << endl;
 	cout << "\t  -------------------" << endl << endl;
 	cout << "\t1. INSERTAR (INT):" << endl << endl;
 	LinkedList<int> list_int;
@@ -215,7 +215,7 @@ int main()
 
 
 	cout << endl;
-  cout << "\t       COLA " << endl;
+	cout << "\t       COLA " << endl;
 	cout << "\t     --------" << endl << endl;
 	cout << "\t1. ENQUEUE (INT):" << endl << endl;
 	Queue<int> Queue_int;
