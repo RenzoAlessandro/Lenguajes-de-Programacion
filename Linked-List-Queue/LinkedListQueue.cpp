@@ -158,7 +158,7 @@ class Queue : public LinkedList<T> {
 };
 
 int main() {
-	LinkedList<int> list_int;
+  LinkedList<int> list_int;
 	list_int.AgregarNodo(12);
 	list_int.AgregarNodo(5);
 	list_int.AgregarNodo(3);
@@ -184,6 +184,7 @@ int main() {
 	
 	Cola_int.clearQ();
 	Cola_int.ImprimirLista();
+	
 	
 	Queue<string> Cola_string;
 	Cola_string.enqueue("a");
