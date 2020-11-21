@@ -76,10 +76,10 @@ public:
         }
     }
 
-    int EliminarHead()
+    T EliminarHead()
     {
         // Comprobar para asegurarse de que haya algo para eliminar
-        int valor = -1;
+        T valor;
         if (head != NULL) {
             Nodo<T>* NodoToDelete = head;
             head = head->siguiente;
@@ -120,7 +120,7 @@ public:
         LinkedList<T>::AgregarNodo(NuevoValor);
     }
 
-    int dequeue()
+    T dequeue()
     {
         return LinkedList<T>::EliminarHead();
     }
@@ -172,41 +172,90 @@ public:
 
 int main()
 {
-    LinkedList<int> list_int;
-    list_int.AgregarNodo(12);
-    list_int.AgregarNodo(5);
-    list_int.AgregarNodo(3);
-    list_int.ImprimirLista();
+	cout << endl;
+  cout << "\t    LISTA ENLAZADA" << endl;
+	cout << "\t  -------------------" << endl << endl;
+	cout << "\t1. INSERTAR (INT):" << endl << endl;
+	LinkedList<int> list_int;
+	list_int.AgregarNodo(12);
+	list_int.AgregarNodo(5);
+	list_int.AgregarNodo(3);
+	list_int.ImprimirLista();
+	cout << endl;
 
-    LinkedList<string> list_string;
-    list_string.AgregarNodo("Renzo");
-    list_string.AgregarNodo("Nidia");
-    list_string.AgregarNodo("Maria");
-    list_string.AgregarNodo("Aly");
-    list_string.AgregarNodo("James");
-    list_string.ImprimirLista();
+	cout << "\t2. INSERTAR (STRING):" << endl << endl;
+	LinkedList<string> list_string;
+	list_string.AgregarNodo("Renzo");
+	list_string.AgregarNodo("Aly");
+	list_string.AgregarNodo("Nidia");
+	list_string.AgregarNodo("Maria");
+	list_string.AgregarNodo("James");
+	list_string.ImprimirLista();
+	cout << endl;
 
-    Queue<int> Cola_int;
-    Cola_int.enqueue(9);
-    Cola_int.enqueue(23);
-    Cola_int.enqueue(56);
-    Cola_int.enqueue(8);
-    Cola_int.ImprimirLista();
+	cout << "\t3. ELIMINAR (INT):" << endl << endl;
+	list_int.EliminarHead();
+	list_int.ImprimirLista();
+	cout << endl;
 
-    Cola_int.dequeue();
-    Cola_int.ImprimirLista();
+	cout << "\t4. ELIMINAR (STRING):" << endl << endl;
+	list_string.EliminarHead();
+	list_string.ImprimirLista();
+	cout << endl;
 
-    Cola_int.clearQ();
-    Cola_int.ImprimirLista();
+	cout << "\t5. DESTRUCTOR (INT):" << endl << endl;
+	list_int.DestruirLista();
+	list_int.ImprimirLista();
+	cout << endl;
 
-    Queue<string> Cola_string;
-    Cola_string.enqueue("a");
-    Cola_string.enqueue("g");
-    Cola_string.enqueue("e");
-    Cola_string.enqueue("y");
-    Cola_string.enqueue("q");
-    Cola_string.enqueue("i");
-    Cola_string.ImprimirLista();
+	cout << "\t6. DESTRUCTOR (STRING):" << endl << endl;
+	list_string.DestruirLista();
+	list_string.ImprimirLista();
+	cout << endl;
 
-    return 0;
+
+	cout << endl;
+  cout << "\t       COLA " << endl;
+	cout << "\t     --------" << endl << endl;
+	cout << "\t1. ENQUEUE (INT):" << endl << endl;
+	Queue<int> Queue_int;
+	Queue_int.enqueue(9);
+	Queue_int.enqueue(23);
+	Queue_int.enqueue(56);
+	Queue_int.enqueue(8);
+	Queue_int.ImprimirLista();
+	cout << endl;
+
+	cout << "\t2. ENQUEUE (STRING):" << endl << endl;
+	Queue<string> Cola_string;
+	Cola_string.enqueue("Renzo");
+	Cola_string.enqueue("Aly");
+	Cola_string.enqueue("Nidia");
+	Cola_string.enqueue("Maria");
+	Cola_string.enqueue("James");
+	Cola_string.enqueue("Wilber");
+	Cola_string.ImprimirLista();
+	cout << endl;
+
+	cout << "\t3. DEQUEUE (INT):" << endl << endl;
+	Queue_int.dequeue();
+	Queue_int.ImprimirLista();
+	cout << endl;
+
+	cout << "\t4. DEQUEUE (STRING):" << endl << endl;
+	Cola_string.dequeue();
+	Cola_string.ImprimirLista();
+	cout << endl;
+
+	cout << "\t5. DESTRUCTOR (INT):" << endl << endl;
+	Queue_int.clearQ();
+	Queue_int.ImprimirLista();
+	cout << endl;
+
+	cout << "\t6. DESTRUCTOR (STRING):" << endl << endl;
+	Cola_string.clearQ();
+	Cola_string.ImprimirLista();
+	cout << endl;
+
+	return 0;
 }
