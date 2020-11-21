@@ -24,8 +24,8 @@ struct Nodo {
 template<class T>
 class LinkedList {
 	protected:
-	   Nodo<T> * head; // Puntero a la cabeza de la Lista
-	   Nodo<T> * tail; // Puntero a la cola de la Lista
+		Nodo<T> * head; // Puntero a la cabeza de la Lista
+		Nodo<T> * tail; // Puntero a la cola de la Lista
 
 	public:
 	   LinkedList(){ // Constructor
