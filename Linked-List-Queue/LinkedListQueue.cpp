@@ -185,7 +185,6 @@ int main() {
 	Cola_int.clearQ();
 	Cola_int.ImprimirLista();
 	
-	
 	Queue<string> Cola_string;
 	Cola_string.enqueue("a");
 	Cola_string.enqueue("g");
