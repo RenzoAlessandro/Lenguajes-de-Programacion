@@ -3,6 +3,7 @@
  * Solución : Lista Enlazada con Cola / Linked List with Queue
  * Usando   : Herencia y Templates / Heritage and Template
  * Resultado: OK
+ * Lenguaje : C++
 **/
 
 #include <iostream>
@@ -18,7 +19,7 @@ using namespace std;
 template <class T>
 struct Nodo {
     T valor; // Se almacena el valor del dato
-    struct Nodo<T>* siguiente; // puntero al siguiente nodo de la lista
+    struct Nodo<T>* siguiente; // Puntero al siguiente nodo de la lista
 };
 
 template <class T>
@@ -58,7 +59,7 @@ public:
     }
 
     void AgregarNodo(T NuevoValor)
-    { // Insertar al final
+    {   // Insertar al final
         // Creamos un nuevo nodo
         Nodo<T>* NuevoNodo = new Nodo<T>;
         NuevoNodo->valor = NuevoValor;
@@ -110,6 +111,9 @@ public:
     }
 };
 
+/**
+ * Herencias de LinkedList
+**/
 template <class T>
 class Queue : public LinkedList<T> {
     // No se necesitan atributos específicos de la cola
